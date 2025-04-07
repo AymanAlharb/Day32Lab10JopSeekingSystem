@@ -11,10 +11,10 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/jop-seeking-system")
+@RequestMapping("/api/v1/jop-seeking-system/user")
 @RequiredArgsConstructor
 public class UserController {
-    UserService userService;
+    private final UserService userService;
 
     @GetMapping("/get-all")
     public ResponseEntity getAllUsers() {

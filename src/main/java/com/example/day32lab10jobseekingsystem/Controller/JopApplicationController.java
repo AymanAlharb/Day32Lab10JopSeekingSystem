@@ -11,10 +11,10 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/jop-seeking-system")
+@RequestMapping("/api/v1/jop-seeking-system/jop-application")
 @RequiredArgsConstructor
 public class JopApplicationController {
-    JopApplicationService jopApplicationService;
+    private final JopApplicationService jopApplicationService;
 
     @GetMapping("/get-all")
     public ResponseEntity getAllJopApplications() {

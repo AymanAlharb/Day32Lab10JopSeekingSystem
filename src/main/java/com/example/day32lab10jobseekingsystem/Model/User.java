@@ -12,8 +12,9 @@ import org.hibernate.validator.constraints.UniqueElements;
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
-@Check(constraints = "age > 20")
-@Check(constraints = "role = 'jop_seeker' or role = 'employer'")
+//@Check(constraints = "age > 20")
+//@Check(constraints = "check role = 'jop_seeker' or role = 'employer'")
+@Table(name = "Users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +25,7 @@ public class User {
     @Column(columnDefinition = "varchar(20) not null")
     private String name;
     @Email
-    @Column(columnDefinition = "unique")
+   // @Column(columnDefinition = "unique")
     private String email;
     @NotEmpty(message = "The password can not be empty.")
     @Column(columnDefinition = "varchar(25) not null")
